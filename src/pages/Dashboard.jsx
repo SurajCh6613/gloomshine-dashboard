@@ -6,7 +6,7 @@ import EarningSummary from "../components/EarningSummary";
 import LiveCarStatus from "../components/LiveCarStatus";
 const Dashboard = () => {
   return (
-    <section className="min-h-screen w-full flex">
+    <section className="h-screen w-full flex">
       <div className="w-[30%]">
         <StatsCard />
       </div>

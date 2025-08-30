@@ -89,7 +89,7 @@ export default function LiveCarStatus() {
                 </td>
                 <td className="p-2 text-gray-600"> {c.earnings}</td>
                 <td>
-                  <button className="bg-blue-600 text-xs  rounded-md py-1 px-2 text-white mt-1 mb-1">
+                  <button className="bg-blue-600 text-xs  rounded-md py-1 px-2 text-white mt-1 mb-1 cursor-pointer hover:bg-blue-700">
                     Details
                   </button>
                 </td>

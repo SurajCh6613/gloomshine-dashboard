@@ -29,7 +29,7 @@ export default function StatsCard() {
     }, // red
   ];
   return (
-    <section className="w-full min-h-screen bg-yellow-50 px-2 py-6">
+    <section className="w-full h-full bg-yellow-50 px-2 py-6">
       <div>
         <div>
           <h2 className="text-sm sm:text-xl text-gray-700">Todays Statistics</h2>
@@ -37,7 +37,7 @@ export default function StatsCard() {
         </div>
         <div className="flex flex-col gap-2 mt-2">
           {/* Income Card */}
-          <div className="w-full h-full flex flex-col gap-1 bg-white p-2 shadow-md rounded-md">
+          <div className="w-full h-full flex flex-col gap-1 bg-white p-4 shadow-md rounded-md">
             <div className="flex justify-between px-2 mb-2 text-xs sm:text-sm">
               <p>Income</p>
               <p className="bg-gray-200 px-2 text-xs py-1 rounded-sm">Today</p>
@@ -53,7 +53,7 @@ export default function StatsCard() {
             </div>
           </div>
           {/* middle Card */}
-          <div className="w-full h-full flex flex-col gap-1 bg-white p-2 shadow-md rounded-md">
+          <div className="w-full h-full flex flex-col gap-1 bg-white p-4 shadow-md rounded-md">
             <div className="flex justify-between px-2 mb-2 text-xs sm:text-sm">
               <p>Expenses</p>
               <p className="bg-gray-200 px-2 text-xs py-1 rounded-sm">Today</p>

@@ -3,7 +3,7 @@ import React from "react";
 
 const CarAvailability = () => {
   return (
-    <div className="bg-white h-[28%] lg:h-auto w-full px-6 py-4 rounded-2xl shadow">
+    <div className="bg-white h-[34%] lg:h-auto w-full px-6 py-4 rounded-2xl shadow">
       <h2 className="text-lg font-semibold mb-2">Car Availability</h2>
 
       {/* Main Container */}
@@ -42,7 +42,7 @@ const CarAvailability = () => {
 
         {/* Button */}
         <div className="w-full lg:w-auto flex-shrink-0">
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition w-full lg:w-auto">
+          <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition w-full lg:w-auto cursor-pointer">
             Check
           </button>
         </div>
