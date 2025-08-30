@@ -59,7 +59,7 @@ const Sidebar = () => {
             <FileText /> <span className="text-xl">Car Report</span>
           </Link>
         </ul>
-        <button className="flex gap-1 bg-gray-400 justify-center py-2 mx-3 rounded-md mt-8">
+        <button className="flex gap-1 bg-gray-400 justify-center py-2 mx-3 rounded-md mt-8 cursor-pointer hover:bg-orange-600 duration-300">
           <LogOut />
           Logout
         </button>
