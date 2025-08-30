@@ -28,15 +28,15 @@ const Sidebar = () => {
   ];
 
   return (
-    <section className="w-[25%]  h-screen bg-gray-900 text-white flex flex-col p-4">
+    <section className="w-[25%]  min-h-screen bg-gray-900 text-white flex flex-col p-4">
       {/* upper-half */}
       <div className="flex flex-col mb-2">
-        <div className="flex  items-center">
+        <NavLink to={"/"} className="flex  items-center">
           <img src="logo.png" alt="logo" className="w-12 h-12" />{" "}
           <span className="text-xl md:text-2xl lg:text-3xl font-semibold">
             CAR RENT
           </span>
-        </div>
+        </NavLink>
         <ul className="mt-4 space-y-1">
           {menuItems.map((menu) => (
             <NavLink
@@ -48,8 +48,15 @@ const Sidebar = () => {
                 }`
               }
             >
-              <span className="absolute left-0 top-1  w-1 h-8 bg-white rounded-r-md"></span>
-              {menu.icon} <span className="text-xl">{menu.name}</span>
+              {({ isActive }) => (
+                <>
+                  {isActive && (
+                    <span className="absolute left-0 top-1 w-1 h-8 bg-white rounded-r-md"></span>
+                  )}
+                  {menu.icon}
+                  <span className="text-xl">{menu.name}</span>
+                </>
+              )}
             </NavLink>
           ))}
         </ul>
@@ -64,6 +71,7 @@ const Sidebar = () => {
           {lowerMenuItems.map((item) => (
             <NavLink
               key={item.path}
+              to={item.path}
               className="flex py-2 px-3 gap-2 items-center rounded-md"
             >
               {item.icon} <span className="text-xl">{item.name}</span>
