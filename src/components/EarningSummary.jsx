@@ -22,7 +22,7 @@ const EarningSummary = () => {
   ];
 
   return (
-    <div className="bg-white p-4 rounded-2xl shadow w-full h-[180px]">
+    <div className="bg-white p-4 rounded-2xl shadow w-full h-1/3">
       <div className="flex justify-between">
         <div className="flex">
           <h3 className="text-sm font-semibold">Earning Summary</h3>

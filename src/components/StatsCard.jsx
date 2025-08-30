@@ -32,7 +32,9 @@ export default function StatsCard() {
     <section className="w-full h-full bg-yellow-50 px-2 py-6">
       <div>
         <div>
-          <h2 className="text-sm sm:text-xl text-gray-700">Todays Statistics</h2>
+          <h2 className="text-sm sm:text-xl text-gray-700">
+            Todays Statistics
+          </h2>
           <p className="text-xs sm:text-sm">Tue, 11 Jul, 2025, 11:30 AM</p>
         </div>
         <div className="flex flex-col gap-2 mt-2">
@@ -76,7 +78,7 @@ export default function StatsCard() {
               <p>Hire vs Cancel</p>
               <p className="bg-gray-200 px-3 text-xs py-1  rounded-sm">Today</p>
             </div>
-            <div className="w-full h-35">
+            <div className="w-full h-25">
               <ResponsiveContainer>
                 <PieChart>
                   <Pie
@@ -85,7 +87,7 @@ export default function StatsCard() {
                     cx="50%"
                     cy="50%"
                     innerRadius={30}
-                    outerRadius={50}
+                    outerRadius={40}
                   >
                     {data.map((entry, index) => (
                       <Cell key={index} fill={entry.chartColor} />
