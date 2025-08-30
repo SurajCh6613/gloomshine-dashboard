@@ -28,12 +28,12 @@ const Sidebar = () => {
   ];
 
   return (
-    <section className="lg:w-1/4  min-h-screen bg-gray-900 text-white flex flex-col p-4">
+    <section className="lg:w-1/4  h-screen bg-gray-900 text-white flex flex-col p-4">
       {/* upper-half */}
       <div className="flex flex-col mb-2">
         <NavLink to={"/"} className="flex  items-center">
           <img src="logo.png" alt="logo" className="w-12 h-12" />{" "}
-          <span className="hidden lg:flex text-sm md:text-xl lg:text-3xl font-semibold">
+          <span className="hidden lg:flex text-sm md:text-xl lg:text-2xl font-semibold">
             CAR RENT
           </span>
         </NavLink>
@@ -54,7 +54,7 @@ const Sidebar = () => {
                     <span className="absolute left-0 top-1 w-1 h-8 bg-white rounded-r-md"></span>
                   )}
                   {menu.icon}
-                  <span className="hidden text-xl lg:flex">{menu.name}</span>
+                  <span className="hidden text-sm lg:flex">{menu.name}</span>
                 </>
               )}
             </NavLink>
@@ -68,13 +68,25 @@ const Sidebar = () => {
           <span className="text-xl">Reports</span>
         </h3>
         <ul className="mt-4 space-y-1">
-          {lowerMenuItems.map((item) => (
+              {lowerMenuItems.map((menu) => (
             <NavLink
-              key={item.path}
-              to={item.path}
-              className="flex py-2 px-3 gap-2 items-center rounded-md"
+              key={menu.path}
+              to={menu.path}
+              className={({ isActive }) =>
+                `flex  py-2 px-3 gap-2 items-center rounded-md relative ${
+                  isActive ? "bg-blue-600" : "bg-transparent"
+                }`
+              }
             >
-              {item.icon} <span className="text-xl hidden lg:flex">{item.name}</span>
+              {({ isActive }) => (
+                <>
+                  {isActive && (
+                    <span className="absolute left-0 top-1 w-1 h-8 bg-white rounded-r-md"></span>
+                  )}
+                  {menu.icon}
+                  <span className="hidden text-sm lg:flex">{menu.name}</span>
+                </>
+              )}
             </NavLink>
           ))}
         </ul>
