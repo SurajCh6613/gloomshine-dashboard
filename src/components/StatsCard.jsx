@@ -29,7 +29,7 @@ export default function StatsCard() {
     }, // red
   ];
   return (
-    <section className="w-full h-full bg-yellow-50 px-2 py-6">
+    <section className="w-full h-full bg-yellow-50 px-2 py-3">
       <div>
         <div>
           <h2 className="text-sm sm:text-xl text-gray-700">
@@ -86,8 +86,8 @@ export default function StatsCard() {
                     dataKey="value"
                     cx="50%"
                     cy="50%"
-                    innerRadius={30}
-                    outerRadius={40}
+                    innerRadius={25}
+                    outerRadius={35}
                   >
                     {data.map((entry, index) => (
                       <Cell key={index} fill={entry.chartColor} />
