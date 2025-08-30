@@ -22,10 +22,10 @@ const EarningSummary = () => {
   ];
 
   return (
-    <div className="bg-white p-4 rounded-2xl shadow w-full h-1/3">
+    <div className="bg-white p-4 rounded-2xl shadow w-full h-1/3 ">
       <div className="flex justify-between">
         <div className="flex">
-          <h3 className="text-sm font-semibold">Earning Summary</h3>
+          <h3 className="text-xs lg:text-sm font-semibold">Earning Summary</h3>
           <select className="px-2 py-1 text-xs">
             <option>Mar 2022 – Oct 2022</option>
             <option>Jan 2022 – Jun 2022</option>
@@ -45,7 +45,7 @@ const EarningSummary = () => {
           </div>
         </div>
       </div>
-      <ResponsiveContainer width="100%" height="80%">
+      <ResponsiveContainer width="100%" height="80%" >
         <AreaChart data={data}>
           <CartesianGrid horizontal={false} strokeDasharray="3 3" />
           <XAxis dataKey="month" />

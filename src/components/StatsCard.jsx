@@ -74,11 +74,11 @@ export default function StatsCard() {
           </div>
           {/* Bottom Card */}
           <div className="w-full h-full flex flex-col gap-1 bg-white p-2 shadow-md rounded-md">
-            <div className="flex text-sm justify-between px-2">
+            <div className="flex text-xs lg:text-sm justify-between px-2">
               <p>Hire vs Cancel</p>
               <p className="bg-gray-200 px-3 text-xs py-1  rounded-sm">Today</p>
             </div>
-            <div className="w-full h-25">
+            <div className="w-full md:h-15">
               <ResponsiveContainer>
                 <PieChart>
                   <Pie
@@ -86,8 +86,8 @@ export default function StatsCard() {
                     dataKey="value"
                     cx="50%"
                     cy="50%"
-                    innerRadius={25}
-                    outerRadius={35}
+                    innerRadius={20}
+                    outerRadius={30}
                   >
                     {data.map((entry, index) => (
                       <Cell key={index} fill={entry.chartColor} />

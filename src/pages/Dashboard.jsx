@@ -7,10 +7,10 @@ import LiveCarStatus from "../components/LiveCarStatus";
 const Dashboard = () => {
   return (
     <section className="h-screen w-full flex">
-      <div className="w-[30%]">
+      <div className="w-1/3">
         <StatsCard />
       </div>
-      <div className="w-[70%] p-4 space-y-4">
+      <div className="w-2/3 p-4 space-y-4">
         <SearchBar />
         <CarAvailability />
         <LiveCarStatus />

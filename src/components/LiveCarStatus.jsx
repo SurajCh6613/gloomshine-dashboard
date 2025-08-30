@@ -51,7 +51,7 @@ const cars = [
 
 export default function LiveCarStatus() {
   return (
-    <div className="bg-white p-4 h-1/3 overflow-hidden rounded-2xl shadow">
+    <div className="bg-white p-4 h-48 lg:h-1/3 overflow-hidden rounded-2xl shadow">
       <div className="flex justify-between">
         <h2 className=" font-bold mb-1">Live Car Status</h2>
         <SlidersHorizontal className="text-gray-700" />
