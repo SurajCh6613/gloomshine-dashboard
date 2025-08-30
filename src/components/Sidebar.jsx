@@ -10,9 +10,23 @@ import {
   LogOut,
   Bell,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
+  const menuItems = [
+    { name: "Dashboard", path: "/dashboard", icon: <LayoutDashboard /> },
+    { name: "Drivers", path: "/drivers", icon: <Users /> },
+    { name: "Bookings", path: "/bookings", icon: <Car /> },
+    { name: "Notifications", path: "/notifications", icon: <Bell /> },
+    { name: "Settings", path: "/settings", icon: <Settings /> },
+  ];
+
+  const lowerMenuItems = [
+    { name: "Payment Details", path: "/payments", icon: <CreditCard /> },
+    { name: "Transactions", path: "/transactions", icon: <BarChart3 /> },
+    { name: "Car Report", path: "/car-report", icon: <FileText /> },
+  ];
+
   return (
     <section className="w-[25%]  h-screen bg-gray-900 text-white flex flex-col p-4">
       {/* upper-half */}
@@ -24,40 +38,37 @@ const Sidebar = () => {
           </span>
         </div>
         <ul className="mt-4 space-y-1">
-          <Link className="flex bg-blue-500 py-2 px-3 gap-2 items-center rounded-md relative">
-            <span className="absolute left-0 top-1  w-1 h-8 bg-white rounded-r-md"></span>
-            <LayoutDashboard /> <span className="text-xl">Dashboard</span>
-          </Link>
-          <Link className="flex py-2 px-3 gap-2 items-center rounded-md">
-            <Users /> <span className="text-xl">Drivers</span>
-          </Link>
-          <Link className="flex py-2 px-3 gap-2 items-center rounded-md">
-            <Car /> <span className="text-xl">Bookings</span>
-          </Link>
-          <Link className="flex py-2 px-3 gap-2 items-center rounded-md">
-            <Bell /> <span className="text-xl">Notification</span>
-          </Link>
-          <Link className="flex py-2 px-3 gap-2 items-center rounded-md">
-            <Settings /> <span className="text-xl">Settings</span>
-          </Link>
+          {menuItems.map((menu) => (
+            <NavLink
+              key={menu.path}
+              to={menu.path}
+              className={({ isActive }) =>
+                `flex  py-2 px-3 gap-2 items-center rounded-md relative ${
+                  isActive ? "bg-blue-600" : "bg-transparent"
+                }`
+              }
+            >
+              <span className="absolute left-0 top-1  w-1 h-8 bg-white rounded-r-md"></span>
+              {menu.icon} <span className="text-xl">{menu.name}</span>
+            </NavLink>
+          ))}
         </ul>
       </div>
       <hr />
       {/* Lower Half */}
       <div className="flex flex-col justify-between">
+        <h3 className="py-2 px-3 text-gray-400">
+          <span className="text-xl">Reports</span>
+        </h3>
         <ul className="mt-4 space-y-1">
-          <Link className="py-2 px-3 text-gray-400">
-            <span className="text-xl">Reports</span>
-          </Link>
-          <Link className="flex py-2 px-3 gap-2 items-center rounded-md">
-            <CreditCard /> <span className="text-xl">Payment Details</span>
-          </Link>
-          <Link className="flex py-2 px-3 gap-2 items-center rounded-md">
-            <BarChart3 /> <span className="text-xl">Transactions</span>
-          </Link>
-          <Link className="flex py-2 px-3 gap-2 items-center rounded-md">
-            <FileText /> <span className="text-xl">Car Report</span>
-          </Link>
+          {lowerMenuItems.map((item) => (
+            <NavLink
+              key={item.path}
+              className="flex py-2 px-3 gap-2 items-center rounded-md"
+            >
+              {item.icon} <span className="text-xl">{item.name}</span>
+            </NavLink>
+          ))}
         </ul>
         <button className="flex gap-1 bg-gray-400 justify-center py-2 mx-3 rounded-md mt-8 cursor-pointer hover:bg-orange-600 duration-300">
           <LogOut />
