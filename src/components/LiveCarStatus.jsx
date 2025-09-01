@@ -38,15 +38,7 @@ const cars = [
     color: "bg-red-600",
     img: "https://i.pravatar.cc/40?img=3",
   },
-  {
-    no: "03",
-    driver: "Suraj",
-    car: "6613",
-    status: "In Route",
-    earnings: "$80",
-    color: "bg-red-600",
-    img: "https://i.pravatar.cc/40?img=3",
-  },
+  
 ];
 
 export default function LiveCarStatus() {
@@ -54,9 +46,9 @@ export default function LiveCarStatus() {
     <div className="bg-white p-4 h-48 lg:h-1/3 overflow-hidden rounded-2xl shadow">
       <div className="flex justify-between">
         <h2 className=" font-bold mb-1">Live Car Status</h2>
-        <SlidersHorizontal className="text-gray-700" />
+        <SlidersHorizontal className="text-gray-700 cursor-pointer" />
       </div>
-      <div className="max-h-48 overflow-y-scroll">
+      <div className="max-h-48 overflow-y-auto pb-6">
         <table className="w-full text-left border-collapse">
           <thead className="sticky top-0 bg-white text-xs text-gray-500">
             <tr>

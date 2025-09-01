@@ -54,7 +54,7 @@ const EarningSummary = () => {
 
           {/* Gradient for blue area */}
           <defs>
-            <linearGradient id="colorCurrent" x1="0" y1="0" x2="0" y2="1">
+            <linearGradient id="colorCurrent" x1="1" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor="#3b82f6" stopOpacity={0.6} />
               <stop offset="100%" stopColor="#3b82f6" stopOpacity={0.05} />
             </linearGradient>
@@ -66,7 +66,7 @@ const EarningSummary = () => {
             dataKey="current"
             stroke="#2563eb"
             fill="url(#colorCurrent)"
-            strokeWidth={3}
+            strokeWidth={2}
           />
 
           {/* Gray dashed comparison line */}

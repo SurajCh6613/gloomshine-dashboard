@@ -28,12 +28,12 @@ const Sidebar = () => {
   ];
 
   return (
-    <section className="lg:w-1/4  h-screen bg-gray-900 text-white flex flex-col p-4">
+    <section className="group w-[8%] hover:w-1/4  h-screen bg-gray-900 text-white flex flex-col p-4 duration-300">
       {/* upper-half */}
       <div className="flex flex-col mb-2">
         <NavLink to={"/"} className="flex  items-center">
           <img src="logo.png" alt="logo" className="w-12 h-12" />{" "}
-          <span className="hidden lg:flex text-sm md:text-xl lg:text-2xl font-semibold">
+          <span className="hidden group-hover:flex text-xs md:text-xl lg:text-2xl font-semibold">
             CAR RENT
           </span>
         </NavLink>
@@ -54,7 +54,7 @@ const Sidebar = () => {
                     <span className="absolute left-0 top-1 w-1 h-8 bg-white rounded-r-md"></span>
                   )}
                   {menu.icon}
-                  <span className="hidden text-sm lg:flex">{menu.name}</span>
+                  <div className="text-sm hidden group-hover:inline">{menu.name}</div>
                 </>
               )}
             </NavLink>
@@ -65,7 +65,7 @@ const Sidebar = () => {
       {/* Lower Half */}
       <div className="flex flex-col justify-between">
         <h3 className="py-2 px-3 text-gray-400">
-          <span className="text-xl">Reports</span>
+          <span className="text-sm lg:text-xl">Reports</span>
         </h3>
         <ul className="mt-4 space-y-1">
               {lowerMenuItems.map((menu) => (
@@ -84,7 +84,7 @@ const Sidebar = () => {
                     <span className="absolute left-0 top-1 w-1 h-8 bg-white rounded-r-md"></span>
                   )}
                   {menu.icon}
-                  <span className="hidden text-sm lg:flex">{menu.name}</span>
+                  <span className="hidden text-sm group-hover:inline">{menu.name}</span>
                 </>
               )}
             </NavLink>
